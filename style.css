@@ -279,15 +279,16 @@ a{
     border-radius: 10px;
     margin: 10px 0px;
 }
-
-.sec4box1{
+.sec4box3, .sec4box, .sec4box2{
     position: relative;
 }
 
+
 .limited{
+    font-size: 15px;
     color: white;
     background-color: red;
-    padding: 2px 5px;
+    padding: 2px 10px;
     border-radius: 10px;
     font-weight: 400;
     position: absolute;
@@ -295,3 +296,16 @@ a{
     left: -10px;
     width: max-content;
 }
+.limited2{
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 400;
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    width: max-content;
+}
+

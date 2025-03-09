@@ -31,15 +31,20 @@ function changeDiv2(i) {
     }else if(i===1){
         sec4boxDiv2.innerHTML = '<button class="sec4box2 active">FundingPips</button>'
     }else if(i===2){
-        sec4boxDiv2.innerHTML = '<button class="sec4box2 active">FundingPips</button><button class="sec4box2 idle">FundingPips</button>'
+        sec4boxDiv2.innerHTML = '<button class="sec4box2 active">FundingPips</button> <button class="sec4box2 idle">FundingPips <span class="limited2">Limited time</span> </button>'
+        for (let i = 0; i < sec4Btns2.length; i++) {
+            sec4Btns2[i].addEventListener('click', 
+                () => changeState2(sec4Btns2[i])
+            )
+        }
     }
 }
 
 
 function changeState2(element) {
+    
     element.classList.remove('idle')
     element.classList.add('active')
-    console.log(element)
 
     for (let i = 0; i < sec4Btns2.length; i++) {
         if (sec4Btns2[i] !== element) {
@@ -69,11 +74,7 @@ for (let i = 0; i < sec4Btns.length; i++) {
         () => changeState(sec4Btns[i])
     )
 }
-for (let i = 0; i < sec4Btns2.length; i++) {
-    sec4Btns2[i].addEventListener('click', 
-        () => changeState2(sec4Btns2[i])
-    )
-}
+
 for (let i = 0; i < sec4Btns3.length; i++) {
     sec4Btns3[i].addEventListener('click', 
         () => changeState3(sec4Btns3[i])
