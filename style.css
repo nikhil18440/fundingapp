@@ -444,3 +444,11 @@ a:hover {
 .slider1 .slider1List .slider1Listitem img{
     width: 100%;
 }
+
+.slider1:hover .slider1Listitem{
+    animation-play-state: paused;
+}
+
+.slider1Listitem:hover{
+    cursor: pointer;
+}
