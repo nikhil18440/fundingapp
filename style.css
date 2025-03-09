@@ -13,6 +13,7 @@ body, html{
     margin: 10px 70px;
     border-radius: 20px;
     position: fixed;
+    z-index: 999;
     top: 10px;
     width: calc(100vw - 140px);
 }
@@ -405,6 +406,41 @@ a:hover {
     background-color: #D4D4DF;
 }
 
-.slider{
-    
+.sec5{
+    height: 100vh;
+}
+
+.slider1{
+    width: 100%;
+    height: var(--height);
+    overflow:hidden ;
+}
+
+.slider1 .slider1List{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) var(--quantity));
+    position: relative;
+}
+
+@keyframes autoRun {
+    from{
+        left: 100%;
+    }
+    to{
+        left: calc(var(--width) * -1);
+    }
+}
+
+
+.slider1 .slider1List .slider1Listitem{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc( (10s/var(--quantity)) * (var(--position) - 1) );
+}
+.slider1 .slider1List .slider1Listitem img{
+    width: 100%;
 }
